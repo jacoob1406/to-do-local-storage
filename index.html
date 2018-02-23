@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>to-do app</title>
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:300" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/style.min.css">
+</head>
+
+<body>
+  <h1 class="main-heading">
+    to-do app
+  </h1>
+  <div class="container">
+    <div class="container__add-item">
+      <h2 class="container__add-item__heading">Add a task:</h2>
+      <form action="#" class="container__add-item__form" id="form">
+        <textarea name="task" id="task" class="container__add-item__form__textarea"></textarea>
+        <input type="submit" class="container__add-item__form__submit" value="Save">
+      </form>
+    </div>
+    <div class="container__to-do-list">
+      <h2 class="container__to-do-list__heading">Things to be done</h2>
+      <div class="container__to-do-list__list-items" id="taskList"></div>
+    </div>
+  </div>
+  <script src="script/script.js"></script>
+</body>
+</html>
