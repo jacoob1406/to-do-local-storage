@@ -13,20 +13,21 @@ function eventListeners() {
 function newTask(e) {
   e.preventDefault();
   const task = document.getElementById('task').value;
+  if (task !== '') {
+    const btn = document.createElement('a');
+    btn.textContent = 'x';
+    btn.classList = 'container__to-do-list__list-items__remove';
 
-  const btn = document.createElement('a');
-  btn.textContent = 'x';
-  btn.classList = 'container__to-do-list__list-items__remove';
+    const li = document.createElement('li');
+    li.textContent = task;
+    li.classList = 'container__to-do-list__list-items__item';
+    taskList.appendChild(li);
+    li.appendChild(btn);
 
-  const li = document.createElement('li');
-  li.textContent = task;
-  li.classList = 'container__to-do-list__list-items__item';
-  li.appendChild(btn);
-  taskList.appendChild(li);
+    addToLocalStorage(task);
 
-  addToLocalStorage(task);
-
-  this.reset();
+    this.reset();
+  }
 };
 
 function removeTask(e) {
